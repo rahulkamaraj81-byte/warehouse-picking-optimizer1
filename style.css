@@ -1,0 +1,427 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #0b1020;
+
+    color: white;
+}
+
+
+/* HEADER */
+
+.header {
+
+    padding: 22px 5%;
+
+    background: #111831;
+
+    border-bottom: 1px solid #28345a;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 27px;
+
+}
+
+.header p {
+
+    color: #9ca9cf;
+
+}
+
+.badge {
+
+    background: #4057a8;
+
+    padding: 10px 16px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* MAIN */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1450px;
+
+    margin: 25px auto;
+
+    display: grid;
+
+    grid-template-columns: 240px 1fr 260px;
+
+    gap: 18px;
+
+}
+
+
+/* PANELS */
+
+.panel {
+
+    background: #111831;
+
+    border: 1px solid #28345a;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+}
+
+.panel h2 {
+
+    margin-top: 0;
+
+}
+
+
+/* SELECT */
+
+select {
+
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 8px;
+
+    background: #0d1429;
+
+    color: white;
+
+    border: 1px solid #394875;
+
+    border-radius: 8px;
+
+}
+
+
+/* ORDER BOX */
+
+.orderBox {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #0c1429;
+
+    border-radius: 8px;
+
+}
+
+.orderBox h3 {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #8e9bc1;
+
+}
+
+
+/* BUTTONS */
+
+button {
+
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #536bd9;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    opacity: .85;
+
+}
+
+.green {
+
+    background: #198f72;
+
+}
+
+.orange {
+
+    background: #c97831;
+
+}
+
+.dark {
+
+    background: transparent;
+
+    border: 1px solid #3c4a72;
+
+}
+
+
+/* MAP */
+
+.mapHeader {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.mapHeader p {
+
+    color: #8997bd;
+
+}
+
+#status {
+
+    background: #123c33;
+
+    color: #5de0b8;
+
+    padding: 7px 10px;
+
+    border-radius: 15px;
+
+    height: fit-content;
+
+    font-size: 12px;
+
+}
+
+
+/* WAREHOUSE */
+
+#warehouseMap {
+
+    margin-top: 20px;
+
+    width: 100%;
+
+    aspect-ratio: 15 / 10;
+
+    display: grid;
+
+    grid-template-columns: repeat(15, 1fr);
+
+    gap: 4px;
+
+    background: #080d1b;
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+}
+
+.cell {
+
+    background: #1a2540;
+
+    border-radius: 3px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 10px;
+
+}
+
+.blocked {
+
+    background: #343b50;
+
+}
+
+.start {
+
+    background: #bd9638;
+
+}
+
+.item {
+
+    background: #8a50b2;
+
+}
+
+.route {
+
+    background: #25826e;
+
+}
+
+.picker {
+
+    background: #e45d50;
+
+    border-radius: 50%;
+
+}
+
+
+/* METRICS */
+
+.metric {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #28345a;
+
+    color: #9ba8ca;
+
+}
+
+.metric strong {
+
+    color: white;
+
+}
+
+.highlight strong {
+
+    color: #5de0b8;
+
+}
+
+
+/* WORKLOAD */
+
+.workload div {
+
+    margin: 12px 0;
+
+    color: #b7c1dc;
+
+}
+
+.workload span {
+
+    display: block;
+
+    height: 8px;
+
+    margin-top: 5px;
+
+    background: #4e68d5;
+
+    border-radius: 5px;
+
+}
+
+
+/* LOOP */
+
+.loop {
+
+    background: #0d1429;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+}
+
+.loop p {
+
+    color: #b8c3df;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    width: 92%;
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #687698;
+
+    font-size: 12px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:1050px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    footer {
+
+        flex-direction: column;
+
+    }
+
+}
