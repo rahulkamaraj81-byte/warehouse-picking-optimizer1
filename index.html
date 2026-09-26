@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Warehouse Picking Path Optimizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div>
+        <h1>AI Warehouse Picking Path Optimizer</h1>
+        <p>Intelligent route planning using A* algorithm</p>
+    </div>
+
+    <div class="badge">
+        A* OPTIMIZATION
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <!-- LEFT PANEL -->
+
+    <section class="panel controls">
+
+        <h2>Route Planning</h2>
+
+        <label>Select Order</label>
+
+        <select id="orderSelect">
+            <option value="0">ORD-001</option>
+            <option value="1">ORD-002</option>
+            <option value="2">ORD-003</option>
+        </select>
+
+        <div class="orderBox">
+
+            <h3>Order Items</h3>
+
+            <p id="orderItems">
+                A → C → E
+            </p>
+
+        </div>
+
+        <button onclick="calculateRoute()">
+            Calculate A* Route
+        </button>
+
+        <button class="green" onclick="startSimulation()">
+            ▶ Start Picking
+        </button>
+
+        <button class="orange" onclick="newOrder()">
+            + New Order
+        </button>
+
+        <button class="dark" onclick="resetSystem()">
+            Reset
+        </button>
+
+
+        <h3>Route Legend</h3>
+
+        <div class="legend">
+
+            <p>🟨 Start</p>
+
+            <p>🟪 Item Location</p>
+
+            <p>🟩 Optimized Route</p>
+
+            <p>⬛ Blocked Aisle</p>
+
+            <p>🔴 Picker</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CENTER MAP -->
+
+    <section class="panel mapPanel">
+
+        <div class="mapHeader">
+
+            <div>
+
+                <h2>Warehouse Map</h2>
+
+                <p>
+                    Live optimized picking route
+                </p>
+
+            </div>
+
+            <span id="status">
+                Ready
+            </span>
+
+        </div>
+
+        <div id="warehouseMap"></div>
+
+    </section>
+
+
+    <!-- RIGHT PANEL -->
+
+    <section class="panel metrics">
+
+        <h2>Performance</h2>
+
+
+        <div class="metric">
+
+            <span>Orders</span>
+
+            <strong id="totalOrders">
+                3
+            </strong>
+
+        </div>
+
+
+        <div class="metric">
+
+            <span>Baseline Distance</span>
+
+            <strong id="baselineDistance">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="metric">
+
+            <span>Optimized Distance</span>
+
+            <strong id="optimizedDistance">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="metric highlight">
+
+            <span>Distance Saved</span>
+
+            <strong id="distanceSaved">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="metric">
+
+            <span>Walking Time</span>
+
+            <strong id="walkingTime">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="metric">
+
+            <span>Efficiency</span>
+
+            <strong id="efficiency">
+                -
+            </strong>
+
+        </div>
+
+
+        <h3>Picker Workload</h3>
+
+        <div class="workload">
+
+            <div>
+                Picker 1
+                <span style="width:80%"></span>
+            </div>
+
+            <div>
+                Picker 2
+                <span style="width:55%"></span>
+            </div>
+
+            <div>
+                Picker 3
+                <span style="width:35%"></span>
+            </div>
+
+        </div>
+
+
+        <h3>Operating Loop</h3>
+
+        <div class="loop">
+
+            <p>1️⃣ Observe</p>
+
+            <p>2️⃣ Learn</p>
+
+            <p>3️⃣ Recommend</p>
+
+            <p>4️⃣ Adapt</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        AI-Based Warehouse Picking Path Optimizer
+    </p>
+
+    <p>
+        Academic Prototype • GitHub Pages
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
